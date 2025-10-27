@@ -1,0 +1,29 @@
+# Install PostgreSQL repository
+sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+
+# Disable default PostgreSQL module
+sudo yum -qy module disable postgresql
+
+# Install PostgreSQL 14
+sudo yum -y install postgresql14 postgresql14-server
+
+# Initialize database
+sudo /usr/pgsql-14/bin/postgresql-14-setup initdb
+
+# Start and enable PostgreSQL
+sudo systemctl enable --now postgresql-14
+
+# Change password for postgres user
+sudo passwd postgres
+
+# Switch to postgres user and setup database
+sudo su - postgres
+createuser sonar
+psql
+
+# In PostgreSQL shell:
+ALTER USER sonar WITH ENCRYPTED password 'sonar';
+CREATE DATABASE sonarqube OWNER sonar;
+GRANT ALL PRIVILEGES ON DATABASE sonarqube to sonar;
+\q
+exit
