@@ -1,0 +1,30 @@
+
+Open your browser and navigate to:
+
+http://server_IP:9000
+http://localhost:9000
+
+Default credentials:
+
+Username: admin
+
+Password: admin
+
+Verification
+Check if SonarQube is running:
+sudo systemctl status sonar
+
+
+Troubleshooting
+Check logs: /opt/sonarqube/logs/
+
+Verify PostgreSQL is running: sudo systemctl status postgresql-14
+
+Check firewall settings if unable to access web interface
+
+Notes
+Replace SonarQube version with the latest available
+
+Ensure ports 9000 and 5432 (PostgreSQL) are open
+
+Consider security hardening for production use
