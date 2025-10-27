@@ -1,0 +1,5 @@
+sudo groupadd sonar
+sudo chown -R sonar:sonar /opt/sonarqube
+
+# Edit SonarQube configuration
+sudo vi /opt/sonarqube/conf/sonar.properties
