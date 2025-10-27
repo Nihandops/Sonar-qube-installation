@@ -3,3 +3,9 @@ sudo chown -R sonar:sonar /opt/sonarqube
 
 # Edit SonarQube configuration
 sudo vi /opt/sonarqube/conf/sonar.properties
+
+Add/Modify:
+
+properties
+sonar.jdbc.username=sonar
+sonar.jdbc.password=sonar
