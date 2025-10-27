@@ -9,3 +9,6 @@ Add/Modify:
 properties
 sonar.jdbc.username=sonar
 sonar.jdbc.password=sonar
+
+# Edit sonar script
+sudo vi /opt/sonarqube/bin/linux-x86-64/sonar.sh
