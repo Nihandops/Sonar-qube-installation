@@ -1,0 +1,4 @@
+cd /opt
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.1.0.47736.zip
+sudo unzip sonarqube-9.1.0.47736.zip
+sudo mv sonarqube-9.1.0.47736 sonarqube
